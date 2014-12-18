@@ -25,7 +25,10 @@ namespace Inloggning
             losenord = Console.ReadLine();
 
             // bekräfta anv och lösen
-            if(anvandarnamn == Anvandare && losenord == Losenord)
+            bool anvOk = anvandarnamn == Anvandare;
+            bool losenOk = losenord == losenord;
+
+            if(anvOk && losenOk)
             {
                  // skriv ut resultat
                 Console.WriteLine("Inloggad!");
