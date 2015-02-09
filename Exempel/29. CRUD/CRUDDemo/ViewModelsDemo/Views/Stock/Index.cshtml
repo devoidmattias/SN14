@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ViewModelsDemo.ViewModels.StockListViewModel>
+
+@{
+    ViewBag.Title = "Lager";
+}
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Supplier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StockCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalesPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PurchasePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Margin)
+        </th>
+        <th></th>
+    </tr>
+    
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supplier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StockCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalesPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PurchasePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Margin)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductId })
+        </td>
+    </tr>
+}
+    
+</table>
+
