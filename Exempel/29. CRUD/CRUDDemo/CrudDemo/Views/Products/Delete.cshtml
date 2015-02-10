@@ -1,0 +1,24 @@
+﻿@model CrudDemo.Models.Product
+
+@{
+    ViewBag.Title = "Bekräfta borttagning av produkt";
+}
+
+
+<h1>Bekräfta borttagning av produkt</h1>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+    <p>
+        Bekräfta att du vill ta bort <strong>@Model.Name</strong>.
+    </p>
+    <p>
+        <input type="submit" value="Ta bort" />
+    </p>
+}
+<p>
+    @Html.ActionLink("Tillbaka till lista", "Index")
+</p>
+
+

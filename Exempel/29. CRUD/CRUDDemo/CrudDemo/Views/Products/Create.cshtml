@@ -1,0 +1,20 @@
+﻿@model CrudDemo.Models.Product
+
+@{
+    ViewBag.Title = "Lägg till produkt";
+}
+
+<h2>Lägg till produkt</h2>
+<br/>
+
+
+
+@using (Html.BeginForm("Create", "Products", FormMethod.Post, new {@class = "form-horizontal"}))
+{
+    @Html.Partial("_ProductForm")
+}
+
+<div>
+    @Html.ActionLink("Tillbaka till listan", "Index")
+</div>
+
