@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Products>
+  <Product Id="34435786-0125-4703-8513-BE0BD378D80F">
+    <Name>Lilla PC'n</Name>
+    <Description>Den lilla billiga</Description>
+    <Supplier>Dell</Supplier>
+    <Price>4595</Price>
+  </Product>
+  <Product Id="71F010C3-918B-4DE6-A4DB-C7C9BA681099">
+    <Name>Stora PC'n</Name>
+    <Description>Den onödigt dyra</Description>
+    <Supplier>HP</Supplier>
+    <Price>17995</Price>
+  </Product>
+  <Product Id="AD87277F-E50B-4EB1-B18F-F2F9CE872021">
+    <Name>Windows 8</Name>
+    <Description>Det bästa operativsystemet</Description>
+    <Supplier>Microsoft</Supplier>
+    <Price>1995</Price>
+  </Product>
+  <Product Id="7BD0B83E-A912-44A3-AF1B-F2E2D46214ED">
+    <Name>Windows XP</Name>
+    <Description>Kan inte bli bättre än så här</Description>
+    <Supplier>Microsoft</Supplier>
+    <Price>3995</Price>
+  </Product>
+</Products>
