@@ -1,0 +1,22 @@
+﻿@model Demo.Models.Appointment
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Appointment</title>
+</head>
+<body>
+    <h1>
+        Appointment
+    </h1>
+    <p>
+        @Model.ClientName kommer att närvara på ett möte om @Model.DaysUntilAppointment dagar, den @Model.Date.ToString("U")
+    </p>
+    <p>
+        @Html.ActionLink("Tillbaka", "Index")
+    </p>
+</body>
+</html>

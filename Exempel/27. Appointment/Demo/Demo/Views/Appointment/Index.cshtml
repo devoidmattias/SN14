@@ -1,0 +1,42 @@
+﻿@model Demo.Models.Appointment
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/simple.css" rel="stylesheet" />
+    <title>Appointment</title>
+</head>
+<body>
+    <h1>Appointment</h1>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.ClientName)
+            @Html.EditorFor(model => model.ClientName)
+            @Html.ValidationMessageFor(model => model.ClientName)
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date)
+            @Html.EditorFor(model => model.Date)
+            @Html.ValidationMessageFor(model => model.Date)
+        </div>
+  
+        <div class="form-group">
+            <input type="submit" value="Send" />
+        </div>
+    }
+    <script src="~/Scripts/jquery-2.1.3.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
