@@ -16,21 +16,30 @@ namespace ViewModelsDemo.Controllers
         public ActionResult Index()
         {
             var products = _productDb.GetAll().ToList();
-            var productViewModels = new List<ProductViewModel>();
-            foreach (var product in products)
-            {
-                var productViewModel = new ProductViewModel
-                {
-                    ProductId = product.ProductId,
-                    Category = product.Category == Category.Hardware ? "Hårdavara" : "Mjukvara",
-                    Description = product.Description,
-                    Name = product.Name,
-                    Price = product.Price,
-                    Supplier = product.Supplier.SupplierName
-                };
-                productViewModels.Add(productViewModel);
-            }
+
+            var productViewModels = products
+                .OrderBy(x => x.Name)
+                .Select(x => x.ToViewModel())
+                .ToList();
+
+
             return View(productViewModels);
+
+            //var productViewModels = new List<ProductViewModel>();
+            //foreach (var product in products)
+            //{
+            //    var productViewModel = new ProductViewModel
+            //    {
+            //        ProductId = product.ProductId,
+            //        Category = product.Category == Category.Hardware ? "Hårdavara" : "Mjukvara",
+            //        Description = product.Description,
+            //        Name = product.Name,
+            //        Price = product.Price,
+            //        Supplier = product.Supplier.SupplierName
+            //    };
+            //    productViewModels.Add(productViewModel);
+            //}
+          
         }
     }
 }

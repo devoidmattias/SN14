@@ -113,6 +113,7 @@
     <Compile Include="Controllers\StockController.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="ViewModels\CartIndexViewModel.cs" />
+    <Compile Include="ViewModels\ProductExtensions.cs" />
     <Compile Include="ViewModels\StockListViewModel.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Global.asax.cs">
